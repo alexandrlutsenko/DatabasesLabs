@@ -48,3 +48,5 @@ SELECT * FROM customers WHERE cust_name IS NOT NULL;
 
 SELECT max(purch_amt) FROM orders;
 
+DROP TABLE orders;
+DROP TABLE customers;
