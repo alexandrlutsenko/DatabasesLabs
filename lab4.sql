@@ -52,5 +52,5 @@ UPDATE Boxes SET value = value * 0.85 WHERE code = (
 DELETE FROM Boxes WHERE value < 150;
 
 DELETE FROM Boxes WHERE warehouse = (
-    SELECT code FROM Warehouses WHERE location = 'New York'
+    SELECT code FROM Warehouses WHERE location = 'New York' GROUP BY code
     ) RETURNING *;
